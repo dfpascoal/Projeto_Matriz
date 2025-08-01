@@ -1,0 +1,221 @@
+body {
+  background: #f7fafc;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 950px;
+  margin: 40px auto 0 auto;
+  padding: 28px 20px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07), 0 1.5px 3px rgba(0,0,0,0.03);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 34px;
+  color: #1a365d;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.form-cabecalho {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 200px;
+  flex: 1 1 220px;
+}
+
+.form-row label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.form-row input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid #cbd5e1;
+  padding: 10px 12px;
+  border-radius: 7px;
+  font-size: 1em;
+  background: #f9fafb;
+  transition: border-color 0.2s;
+}
+.form-row input[type="text"]:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.separador {
+  border: none;
+  border-top: 2.5px solid #222;
+  margin: 18px 0 30px 0;
+}
+
+.tabela-conteudos {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 6px rgba(30,41,59,0.05);
+}
+
+.tabela-conteudos th, .tabela-conteudos td {
+  vertical-align: middle;
+  border: 2.5px solid #222;
+  padding: 12px 9px;
+  background: #f7fafc;
+  font-size: 1em;
+  text-align: left;
+}
+.tabela-conteudos th {
+  background: #1976d2;
+  color: #fff;
+  font-size: 1.06em;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.tabela-conteudos td input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #b6c2d9;
+  padding: 8px;
+  font-size: 1em;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.tabela-conteudos td:last-child,
+.tabela-conteudos th:last-child {
+  text-align: center;
+  width: 110px;
+  min-width: 95px;
+}
+
+.adicionar-linha-btn {
+  margin-top: 10px;
+  width: 200px;
+  font-weight: bold;
+  padding: 12px 0;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px rgba(30,41,59,0.07);
+  transition: background 0.18s;
+  cursor: pointer;
+  font-size: 1.06em;
+}
+.adicionar-linha-btn:hover {
+  background: #11408a;
+}
+
+.export-options {
+  margin-top: 32px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.exportar-btn {
+  background: #43a047;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 7px;
+  font-size: 1.09em;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  cursor: pointer;
+  transition: background 0.16s;
+  box-shadow: 0 2px 7px rgba(34,139,34,0.11);
+}
+.exportar-btn:hover {
+  background: #2e7031;
+}
+
+select#orientation {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #b6c2d9;
+  font-size: 1em;
+  background: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .container {
+    max-width: 100%;
+    padding: 10px 4px;
+  }
+  header h1 {
+    font-size: 1.25rem;
+  }
+  .form-cabecalho {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .tabela-conteudos th,
+  .tabela-conteudos td {
+    padding: 7px 4px;
+    font-size: .97em;
+  }
+  .adicionar-linha-btn,
+  .exportar-btn {
+    width: 100%;
+    font-size: .98em;
+  }
+  .export-options {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 11px;
+  }
+}
+
+.campo-tabela {
+  border: 1.5px solid #b6c2d9;
+  border-radius: 5px;
+  padding: 7px 10px;
+  background: #f9fafb;
+  font-size: 1em;
+  transition: border-color 0.2s;
+}
+.campo-tabela:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.remover-linha-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 7px 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.97em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.remover-linha-btn:hover {
+  background: #b71c1c;
+}
